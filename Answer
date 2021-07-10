@@ -1,0 +1,144 @@
+
+1.Automation
+
+1.Visit URL
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+time.sleep(5)
+driver.quit()
+
+2.Select tour from search bar
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+driver.find_element_by_xpath(/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/nav/ul/li[5]/a").click()
+time.sleep(5)
+driver.close()
+
+
+3.Select Legoland Malaysia Day pass as destination
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+driver.find_element_by_xpath(/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/nav/ul/li[5]/a").click()
+element=driver.find_element_by_xpath("/html/body/div[6]/div/input")
+drp=select(element)
+drp.select_by_visible_text('Legoland Malaysia Day pass')
+time.sleep(5)
+driver.close()
+
+4.Select Tour type yacht
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+driver.find_element_by_xpath(/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/nav/ul/li[5]/a").click()
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/div/div[5]/div/div/form/div/div/div[2]/div/div/div/div/div[2]/div/a/span")
+drp=select(element)
+drp.select_by_index('8')
+time.sleep(5)
+driver.close()
+
+5.Select date as 09/07/21
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+element=driver.find_element_by_xpath("//*[@id="DateTours"]").send_keys("09-07-21")
+time.sleep(5)
+driver.close()
+
+6.Make Adult count 2 and search
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/div/div[5]/div/div/form/div/div/div[3]/div/div/div/div/div/div/div[2]/div/div[2]/div/span/button[1]").click()
+time.sleep(5)
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/div/div[5]/div/div/form/div/div/div[4]/button").click()
+driver.close()
+
+
+7.Select Booknow
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+element=driver.find_element_by_xpath("/html/body/div[6]/div/input")
+drp=select(element)
+drp.select_by_visible_text('Legoland Malaysia Day pass')
+time.sleep(5)
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/div/div[5]/div/div/form/div/div/div[2]/div/div/div/div/div[2]/div/a/span")
+drp=select(element)
+drp.select_by_index('8')
+time.sleep(5)
+element=driver.find_element_by_xpath("//*[@id="DateTours"]").send_keys("09-07-21")
+time.sleep(5)
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/div/div[5]/div/div/form/div/div/div[3]/div/div/div/div/div/div/div[2]/div/div[2]/div/span/button[1]").click()
+time.sleep(5)
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/div/div[5]/div/div/form/div/div/div[4]/button").click()
+time.sleep(2)
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[1]/div[3]/div/div/div/div/div/div/div[5]/div/div/form/div/div/div[4]/button").click()
+driver.close()
+
+8.Sign Up an account
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+element=driver.find_element_by_id("dropdownCurrency").click()
+element=driver.find_element_by_xpath("/html/body/div[2]/header/div[1]/div/div/div[2]/div/ul/li[3]/div/div/div/a[2]").click()
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[3]/div[1]/div/label/input").send_keys('Rashedul')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[3]/div[2]/div/label/input").send_keys('Alam')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[4]/label/span").send_keys('01717336603')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[5]/label/span").send_keys('rashedul.alam499@gmail.com')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[6]/label/span").send_keys('123456')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[7]/label/span").send_keys('123456')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[8]/button").click()
+time.sleep(2)
+driver.quit()
+
+9.Turn On "Yes" for subscribing news letter from user account
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+element=driver.find_element_by_id("dropdownCurrency").click()
+element=driver.find_element_by_xpath("/html/body/div[2]/header/div[1]/div/div/div[2]/div/ul/li[3]/div/div/div/a[2]").click()
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[3]/div[1]/div/label/input").send_keys('Rashedul')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[3]/div[2]/div/label/input").send_keys('Alam')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[4]/label/span").send_keys('01717336603')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[5]/label/span").send_keys('rashedul.alam499@gmail.com')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[6]/label/span").send_keys('123456')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[7]/label/span").send_keys('123456')
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/section/div/div/div[2]/div/form/div[8]/button").click()
+time.sleep(2)
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[1]/aside/nav/ul/li[4]/a").click()
+time.sleep(2)
+element=driver.find_element_by_xpath("/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[2]/div/div[4]/div/div[1]/label/span").click()
+time.sleep(2)
+driver.quit()
+
+3.SQL Problem:
+Answer:SELECT Name FROM STUDENTS WHERE Marks > 75 ORDER BY RIGHT(Name, 3), ID ASC;
