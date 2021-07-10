@@ -1,0 +1,23 @@
+
+1. Visit URL
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+driver.quit()
+
+2.Select tour from search bar
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import keys
+import times
+
+driver=webdriver.chrome(executable_path="C:\Users\Dell\Desktop\Selenium\chromedriver_win32_2.exe")
+driver.get("https://www.phptravels.net/home")
+
+element=driver.find_element_by_id("tourtype_chosen")
+drp=select(element)
+drp.select_by_index(01)
+driver.quit()
